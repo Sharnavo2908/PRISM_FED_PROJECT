@@ -65,18 +65,17 @@ function LOGIN(){
     event.preventDefault();
     let username=document.getElementById('username').value.trim();
     let password=document.getElementById('password').value;
+    let role=GET_ROLE();
 
     // direct admin login: username admin and password admin123
-    // works every time, even on a new browser or the GitHub site
-    if(username==ADMIN_USERNAME && password==ADMIN_PASSWORD){
-        sessionStorage.setItem('role','admin');
+    // only works when the ADMIN button was clicked, so the user login never goes to the admin page
+    if(role=='admin' && username==ADMIN_USERNAME && password==ADMIN_PASSWORD){
         sessionStorage.setItem('current_user',username);
         window.location.href='rating_check_dashboard.html';
         return;
     }
 
     // normal login for other accounts
-    let role=GET_ROLE();
     let users=GET_USERS();
 
     for(let i=0;i<users.length;i++){
