@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/rating_check_dashboard.css">
+    <title>RATING CHECK DASHBOARD</title>
+</head>
+<body onload="CHECK_LOGIN('admin'); SHOW_FEEDBACK()">
+    <div id="header">
+        <div class="logo"><img src="../images/Gemini_Generated_Image_xkhxpexkhxpexkhx-Picsart-BackgroundRemover.png" style="height: 150px;width: 400px;margin-left: -57%;"></div>
+        <div class="navbar">
+            <a href="about_us.html">About us</a>
+            <a href="contact_us.html">Contact us</a>
+            <a href="../frontpage.html" onclick="LOGOUT()">Logout</a>
+        </div>
+    </div>
+
+    <div id="mainbox">
+        <h1>FEEDBACK RECEIVED</h1>
+
+        <select id="filter" onchange="SHOW_FEEDBACK()">
+            <option value="all">All topics</option>
+            <option value="Faculty and Teaching">Faculty and Teaching</option>
+            <option value="Course and Curriculum">Course and Curriculum</option>
+            <option value="Infrastructure and Facilities">Infrastructure and Facilities</option>
+            <option value="Library Services">Library Services</option>
+            <option value="Examinations and Evaluation">Examinations and Evaluation</option>
+            <option value="Student Support Services">Student Support Services</option>
+            <option value="Clubs and Extra Curricular Activities">Clubs and Extra Curricular Activities</option>
+            <option value="Campus Environment">Campus Environment</option>
+        </select>
+        <p id="summary"></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>TOPIC</th>
+                    <th>USER</th>
+                    <th>STARS</th>
+                    <th>FEEDBACK</th>
+                    <th>DATE</th>
+                </tr>
+            </thead>
+            <tbody id="table_body"></tbody>
+        </table>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

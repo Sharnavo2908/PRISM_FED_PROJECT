@@ -1,0 +1,167 @@
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(12, 12, 40);
+        }
+
+        #header{
+            height: 99px;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+        }
+
+        .logo{
+            height: 90px;
+            margin-left: 2%;
+            width: 40%;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .navbar{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            justify-self: flex-end;
+            align-self: center;
+            margin-left: 27%;
+            height: 100px;
+            width: 25%;
+        }
+
+        a{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: xx-large;
+            font-weight: bolder;
+            font-display: inherit;
+            text-align: center;
+            padding: auto;
+            margin-left: 5%;
+            justify-content: center;
+            margin-top: 8%;
+            text-decoration: none;
+            transition: transform 0.1s ease;
+            cursor: pointer;
+        }
+
+        a:hover{
+            transform: scale(1.19);
+            color: rgb(7, 164, 248);
+        }
+
+
+
+        #main_body{
+            margin-left: 13%;
+            height: 80%;
+            width: 90%;
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
+            justify-content: center;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+        }
+
+        .box1{
+            height: 90%;    /* 100% of the fixed-height container = stays fixed */
+            width: 40%;    /* fixed width instead of 40% */
+            background-color: cadetblue;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .box2{
+            position: relative;
+            height: 90%;
+            width: 60%;    /* fixed width instead of 60% */
+            margin-left: -50px;
+            background-color: rgb(25, 25, 73);
+            border-radius: 20px;
+
+        }
+
+        .logoimage{
+            margin-top: 2%;
+            margin-left: 3%;
+            height: 80px;
+            width: 380px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .hero-text {
+            max-width: 5780px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-heading {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        .hero-subtext {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 30px;
+            font-weight: 400;
+            color: #B8BCC8;   /* soft muted grey-blue, easy on the dark navy */
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .about{
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 25px;
+            font-weight: 400;
+            color: #B8BCC8;   /* soft muted grey-blue, easy on the dark navy */
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .hero-btn {
+            align-self: right;
+            justify-self:flex-end;
+            height: 60px;
+            width: 200px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: #f2eff5;              /* dark text on light-warm button */
+            background: linear-gradient(90deg, #FFC107, #FF6F00);  /* yellow → orange, matches your logo */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-left: 6%;
+            margin-top: 3%;
+            justify-content: center;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 111, 0, 0.4);
+        }
+
+        .hero-btn:active {
+            transform: translateY(0);
+        }

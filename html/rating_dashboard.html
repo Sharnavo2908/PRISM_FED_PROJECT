@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/rating_dashboard.css">
+    <title>RATING DASHBOARD</title>
+</head>
+<body onload="CHECK_LOGIN('user'); SHOW_TOPIC()">
+    <div id="header">
+        <div class="logo"><img src="../images/Gemini_Generated_Image_xkhxpexkhxpexkhx-Picsart-BackgroundRemover.png" style="height: 150px;width: 400px;margin-left: -57%;"></div>
+        <div class="navbar">
+            <a href="../html/user_dashboard.html">Dashboard</a>
+            <a href="about_us.html">About us</a>
+            <a href="contact_us.html">Contact us</a>
+            <a href="../html/frontpage.html" onclick="LOGOUT()">Logout</a>
+        </div>
+    </div>
+
+    <div id="mainbox" style="width:1300px;">
+        <h1 id="topic"></h1>
+        <form onsubmit="SUBMIT_FEEDBACK()" style="width: 1270px;">
+            <textarea id="review" placeholder="Write your feedback here..."></textarea>
+
+            <div id="stars">
+                <span class="star" onclick="SET_STARS(1)">&#9733;</span>
+                <span class="star" onclick="SET_STARS(2)">&#9733;</span>
+                <span class="star" onclick="SET_STARS(3)">&#9733;</span>
+                <span class="star" onclick="SET_STARS(4)">&#9733;</span>
+                <span class="star" onclick="SET_STARS(5)">&#9733;</span>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(12, 12, 40);
+    }
+
+    #header{
+        height: 99px;
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+    }
+
+    .logo{
+        height: 90px;
+        margin-left: 2%;
+        width: 40%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .navbar{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        justify-self: flex-end;
+        align-self: center;
+        margin-left: 27%;
+        height: 100px;
+        width: 25%;
+    }
+
+    a{
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: xx-large;
+        font-weight: bolder;
+        font-display: inherit;
+        text-align: center;
+        padding: auto;
+        margin-left: 5%;
+        justify-content: center;
+        margin-top: 8%;
+        text-decoration: none;
+        transition: transform 0.1s ease;
+    }
+
+
+    a:hover{
+        transform: scale(1.19);
+        color: rgb(7, 164, 248);
+    }
+
+    #main_body{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin-top: 150px;
+    }
+
+    #mainbox{
+        height: 700px;
+        width: 1100px;
+        background-color: rgb(13, 10, 56);
+        display: flex;
+        border-radius: 22px;
+    }
+    .login_forms{
+        position: relative;
+        z-index: 2;
+        background-color: #FF6F00;
+    }
+
+    .box1{
+        height: 100%;    /* 100% of the fixed-height container = stays fixed */
+        width: 50%;    /* fixed width instead of 40% */
+        background-color:  rgba(233, 196, 106, 1);
+        border-radius: 20px;
+        overflow: hidden;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+        justify-content: center;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .box2{
+        position: relative;
+        height: 100%;
+        width: 53%;    /* fixed width instead of 60% */
+        background-color: rgba(142, 202, 230, 1);
+        position: relative;
+        z-index: 3;
+        border-radius: 20px;
+        align-items: center;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        justify-content: center;
+    }
+    .box1.slide-right {
+        transform: translateX(90%);
+    }
+
+    /* slide box2 left, over box1 */
+    .box2.slide-left {
+        transform: translateX(-91%);
+    }
+
+    .img1{
+        height: 510px;
+        width: 360px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+        border: 6px solid black;
+        border-radius: 20px;
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+
+    .img2{
+        height: 510px;
+        width: 360px;
+        border: 6px solid black;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-left: 20%;
+        margin-top: 10%;
+    }
+
+    .hero-btn1{
+        align-self: right;
+        justify-self:flex-end;
+        height: 60px;
+        width: 200px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        color: #f2eff5;              /* dark text on light-warm button */
+        background: linear-gradient(90deg, #FFC107, #FF6F00);  /* yellow → orange, matches your logo */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        margin-left: 15%;
+        margin-top: 3%;
+        justify-content: center;
+    }
+
+    .hero-btn1:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(255, 111, 0, 0.4);
+    }
+
+    .hero-btn1:active {
+        transform: translateY(0);
+    }
+
+    
+    .hero-btn2{
+        align-self: right;
+        justify-self:flex-end;
+        height: 60px;
+        width: 200px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        color: #f2eff5;              /* dark text on light-warm button */
+        background: linear-gradient(90deg, #FFC107, #FF6F00);  /* yellow → orange, matches your logo */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        margin-left: 15%;
+        margin-top: 3%;
+        justify-content: center;
+    }
+
+    .hero-btn2:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(255, 111, 0, 0.4);
+    }
+
+    .hero-btn2:active {
+        transform: translateY(0);
+    }
