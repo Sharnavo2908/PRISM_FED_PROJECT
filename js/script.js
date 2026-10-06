@@ -1,5 +1,9 @@
 // ================= LOGIN AND SIGNUP =================
 
+// default admin details
+const ADMIN_USERNAME='admin';
+const ADMIN_PASSWORD='admin123';
+
 // the USER / ADMIN page saves which button was clicked
 function SET_ROLE(role){
     sessionStorage.setItem('role',role);
@@ -37,6 +41,12 @@ function SIGNUP(){
         return;
     }
 
+    // the default admin username cannot be used for a new account
+    if(username==ADMIN_USERNAME){
+        alert('Username already taken');
+        return;
+    }
+
     // username must be new for this role
     for(let i=0;i<users.length;i++){
         if(users[i].username==username && users[i].role==role){
@@ -55,6 +65,17 @@ function LOGIN(){
     event.preventDefault();
     let username=document.getElementById('username').value.trim();
     let password=document.getElementById('password').value;
+
+    // direct admin login: username admin and password admin123
+    // works every time, even on a new browser or the GitHub site
+    if(username==ADMIN_USERNAME && password==ADMIN_PASSWORD){
+        sessionStorage.setItem('role','admin');
+        sessionStorage.setItem('current_user',username);
+        window.location.href='rating_check_dashboard.html';
+        return;
+    }
+
+    // normal login for other accounts
     let role=GET_ROLE();
     let users=GET_USERS();
 
@@ -73,11 +94,26 @@ function LOGIN(){
     alert('Wrong username or password');
 }
 
+// make sure the default admin account is always saved
+function SEED_ADMIN(){
+    let users=GET_USERS();
+    for(let i=0;i<users.length;i++){
+        if(users[i].role=='admin' && users[i].username==ADMIN_USERNAME){
+            users[i].password=ADMIN_PASSWORD;
+            localStorage.setItem('users',JSON.stringify(users));
+            return;
+        }
+    }
+    users.push({name:'Admin',username:ADMIN_USERNAME,email:'',password:ADMIN_PASSWORD,role:'admin'});
+    localStorage.setItem('users',JSON.stringify(users));
+}
+SEED_ADMIN();
+
 // put this on the pages that need a login
 function CHECK_LOGIN(role){
     if(sessionStorage.getItem('current_user')==null || GET_ROLE()!=role){
         alert('Please login first');
-        window.location.href='frontpage.html';
+        window.location.href='index.html';
     }
 }
 
